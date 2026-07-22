@@ -1,0 +1,4 @@
+Nama: Siswa 1
+Asal: SMP Contoh 1
+Hobi: Membaca
+Cita-cita: Insinyur

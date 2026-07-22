@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X.J — SMAN 6 Kabupaten Tangerang (2026/2027)</title>
+    <meta name="description" content="Website portofolio kelas X.J SMAN 6 Kabupaten Tangerang tahun ajaran 2026/2027. Kenangan, profil siswa-siswi, dan memori kelas.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Syne:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="cream">
+
+    <!-- THEME TOGGLE SWITCHER BUTTON -->
+    <div class="theme-switcher-container">
+        <button class="theme-toggle-btn" id="themeToggleBtn" title="Ganti Tema">
+            <i class="fa-solid fa-palette" id="themeToggleIcon"></i>
+            <span id="themeToggleText">Coklat</span>
+        </button>
+    </div>
+
+    <!-- FLOATING DEVELOPER WHATSAPP BUTTON (BOTTOM LEFT) -->
+    <a href="https://wa.me/6285211522956" target="_blank" rel="noopener" class="wa-dev-btn" title="Contact Developer (Revan / Vanx)">
+        <div class="wa-dev-icon">
+            <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <span class="wa-dev-text">Contact Developer</span>
+    </a>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="brand-x">X</span><span class="brand-dot">.</span><span class="brand-j">J</span>
+        </div>
+        <div class="nav-links">
+            <a href="#" class="nav-link active" data-tab="beranda">
+                <i class="fa-solid fa-house nav-icon"></i>
+                <span>Beranda</span>
+            </a>
+            <a href="#" class="nav-link" data-tab="siswa">
+                <i class="fa-solid fa-user-graduate nav-icon"></i>
+                <span>Siswa</span>
+            </a>
+            <a href="#" class="nav-link" data-tab="siswi">
+                <i class="fa-solid fa-graduation-cap nav-icon"></i>
+                <span>Siswi</span>
+            </a>
+            <a href="#" class="nav-link" data-tab="walas">
+                <i class="fa-solid fa-chalkboard-user nav-icon"></i>
+                <span>Walas</span>
+            </a>
+            <a href="#" class="nav-link" data-tab="memori">
+                <i class="fa-solid fa-images nav-icon"></i>
+                <span>Memori</span>
+            </a>
+        </div>
+        <div class="nav-hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobileNav">
+        <a href="#" class="mobile-link active" data-tab="beranda">
+            <i class="fa-solid fa-house"></i> Beranda
+        </a>
+        <a href="#" class="mobile-link" data-tab="siswa">
+            <i class="fa-solid fa-user-graduate"></i> Siswa
+        </a>
+        <a href="#" class="mobile-link" data-tab="siswi">
+            <i class="fa-solid fa-graduation-cap"></i> Siswi
+        </a>
+        <a href="#" class="mobile-link" data-tab="walas">
+            <i class="fa-solid fa-chalkboard-user"></i> Walas
+        </a>
+        <a href="#" class="mobile-link" data-tab="memori">
+            <i class="fa-solid fa-images"></i> Memori Kelas
+        </a>
+        <div class="mobile-credit">
+            <i class="fa-solid fa-code"></i> Created by <span>Revan / Vanx</span>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+
+        <!-- ==================== BERANDA ==================== -->
+        <section class="tab-content active" id="tab-beranda">
+            <!-- HERO -->
+            <div class="hero">
+                <div class="hero-badge">
+                    <i class="fa-solid fa-school"></i> SMAN 6 KABUPATEN TANGERANG • TA 2026/2027
+                </div>
+                <h1 class="hero-title">
+                    <span class="title-line">Kelas</span>
+                    <span class="title-xl">X<span class="title-dot">.</span>J</span>
+                </h1>
+                <p class="hero-subtitle">Satu kelas, seribu cerita. Perjalanan siswa-siswi kelas X.J SMAN 6 Kabupaten Tangerang yang penuh semangat, kebersamaan, dan prestasi.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" id="siswaCount">0</span>
+                        <span class="stat-label">Siswa</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" id="siswiCount">0</span>
+                        <span class="stat-label">Siswi</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">1</span>
+                        <span class="stat-label">Wali Kelas</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">∞</span>
+                        <span class="stat-label">Kenangan</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ABOUT SECTION -->
+            <div class="about-section">
+                <div class="about-grid">
+                    <div class="about-card neo-card">
+                        <div class="about-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <h3>Pendidikan Berkualitas</h3>
+                        <p>Komitmen untuk meraih prestasi akademik terbaik dengan semangat belajar yang tinggi dan kebersamaan.</p>
+                    </div>
+                    <div class="about-card neo-card">
+                        <div class="about-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                        <h3>Kompak & Solid</h3>
+                        <p>Kebersamaan adalah kekuatan kami. Dari tugas kelompok hingga kegiatan sekolah, X.J selalu bersatu.</p>
+                    </div>
+                    <div class="about-card neo-card">
+                        <div class="about-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h3>Berprestasi</h3>
+                        <p>Setiap anggota kelas memiliki potensi unik yang siap bersinar di bidang akademik maupun non-akademik.</p>
+                    </div>
+                    <div class="about-card neo-card">
+                        <div class="about-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <h3>Kreatif & Inovatif</h3>
+                        <p>Kreativitas tanpa batas menjadi ciri khas kami. Selalu menghadirkan ide segar di setiap kesempatan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INSTAGRAM CTA -->
+            <div class="instagram-section">
+                <div class="ig-card neo-card">
+                    <div class="ig-content">
+                        <div class="ig-icon-wrap">
+                            <i class="fa-brands fa-instagram ig-icon"></i>
+                        </div>
+                        <div class="ig-text">
+                            <h3>Instagram Kelas X.J</h3>
+                            <p>Follow akun resmi kelas untuk melihat dokumentasi kegiatan dan keseruan kami!</p>
+                            <span class="ig-handle">@10.centaurus</span>
+                        </div>
+                        <a href="https://www.instagram.com/10.centaurus?igsh=anZmZ2xhdG52MzJx" target="_blank" rel="noopener" class="ig-btn">
+                            <span>Kunjungi Instagram</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MOTTO MARQUEE -->
+            <div class="motto-section">
+                <div class="marquee">
+                    <div class="marquee-inner">
+                        <span><i class="fa-solid fa-star"></i> SOLID <i class="fa-solid fa-star"></i> KOMPAK <i class="fa-solid fa-star"></i> BERPRESTASI <i class="fa-solid fa-star"></i> X.J 26/27 <i class="fa-solid fa-star"></i> SMAN 6 KAB TANGERANG <i class="fa-solid fa-star"></i></span>
+                        <span><i class="fa-solid fa-star"></i> SOLID <i class="fa-solid fa-star"></i> KOMPAK <i class="fa-solid fa-star"></i> BERPRESTASI <i class="fa-solid fa-star"></i> X.J 26/27 <i class="fa-solid fa-star"></i> SMAN 6 KAB TANGERANG <i class="fa-solid fa-star"></i></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB CREDIT BADGE -->
+            <div class="tab-credit-container">
+                <div class="tab-credit-badge">
+                    <i class="fa-solid fa-code"></i> Created by <span>Revan / Vanx</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SISWA ==================== -->
+        <section class="tab-content" id="tab-siswa">
+            <div class="section-header">
+                <h2 class="section-title">Siswa <span class="section-accent">X.J</span></h2>
+                <p class="section-desc">Profil para siswa kelas X.J SMAN 6 Kabupaten Tangerang (TA 2026/2027)</p>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="siswaSearch" placeholder="Cari nama atau asal sekolah siswa..." autocomplete="off">
+                </div>
+            </div>
+            <div class="students-grid" id="siswaGrid">
+                <div class="empty-state">
+                    <div class="empty-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <p>Memuat data siswa...</p>
+                </div>
+            </div>
+            <div class="tab-credit-container">
+                <div class="tab-credit-badge">
+                    <i class="fa-solid fa-code"></i> Created by <span>Revan / Vanx</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== SISWI ==================== -->
+        <section class="tab-content" id="tab-siswi">
+            <div class="section-header">
+                <h2 class="section-title">Siswi <span class="section-accent">X.J</span></h2>
+                <p class="section-desc">Profil para siswi kelas X.J SMAN 6 Kabupaten Tangerang (TA 2026/2027)</p>
+            </div>
+            <div class="search-container">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="siswiSearch" placeholder="Cari nama atau asal sekolah siswi..." autocomplete="off">
+                </div>
+            </div>
+            <div class="students-grid" id="siswiGrid">
+                <div class="empty-state">
+                    <div class="empty-icon"><i class="fa-solid fa-folder-open"></i></div>
+                    <p>Memuat data siswi...</p>
+                </div>
+            </div>
+            <div class="tab-credit-container">
+                <div class="tab-credit-badge">
+                    <i class="fa-solid fa-code"></i> Created by <span>Revan / Vanx</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== WALAS ==================== -->
+        <section class="tab-content" id="tab-walas">
+            <div class="section-header">
+                <h2 class="section-title">Wali <span class="section-accent">Kelas</span></h2>
+                <p class="section-desc">Guru pembimbing dan pemandu kelas X.J</p>
+            </div>
+            <div class="walas-container" id="walasContainer">
+                <div class="walas-hero-card neo-card">
+                    <div class="walas-photo-frame">
+                        <div class="walas-photo-placeholder" id="walasPhoto">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                    </div>
+                    <div class="walas-info">
+                        <div class="walas-badge"><i class="fa-solid fa-award"></i> WALI KELAS X.J</div>
+                        <h2 class="walas-name" id="walasName">Drs. H. AAT ABDULLAH S., M.Pd</h2>
+                        <div class="walas-details" id="walasDetails">
+                            <!-- dynamically loaded -->
+                        </div>
+                        <div class="walas-quote">
+                            <i class="fa-solid fa-quote-left quote-icon"></i>
+                            <p>"Pendidikan adalah senjata paling mematikan di dunia, karena dengan pendidikan, Anda dapat mengubah dunia."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-credit-container">
+                <div class="tab-credit-badge">
+                    <i class="fa-solid fa-code"></i> Created by <span>Revan / Vanx</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== MEMORI KELAS ==================== -->
+        <section class="tab-content" id="tab-memori">
+            <div class="section-header">
+                <h2 class="section-title">Memori <span class="section-accent">Kelas</span></h2>
+                <p class="section-desc">Galeri foto dan momen kebersamaan kelas X.J SMAN 6 Kabupaten Tangerang</p>
+            </div>
+            <div class="memori-grid" id="memoriGrid">
+                <div class="empty-state">
+                    <div class="empty-icon"><i class="fa-solid fa-images"></i></div>
+                    <p>Memuat galeri memori...</p>
+                </div>
+            </div>
+            <div class="tab-credit-container">
+                <div class="tab-credit-badge">
+                    <i class="fa-solid fa-code"></i> Created by <span>Revan / Vanx</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- STUDENT DETAIL MODAL -->
+    <div class="modal-overlay" id="studentModal">
+        <div class="modal-card neo-card">
+            <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-photo-wrap">
+                    <img class="modal-photo" id="modalPhoto" src="" alt="Foto profil">
+                </div>
+                <div class="modal-info">
+                    <h2 class="modal-name" id="modalName"></h2>
+                    <div class="modal-detail-grid" id="modalDetails">
+                        <!-- filled dynamically -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- IMAGE LIGHTBOX -->
+    <div class="lightbox-overlay" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-prev" id="lightboxPrev"><i class="fa-solid fa-chevron-left"></i></button>
+        <button class="lightbox-next" id="lightboxNext"><i class="fa-solid fa-chevron-right"></i></button>
+        <img class="lightbox-img" id="lightboxImg" src="" alt="Memori">
+        <div class="lightbox-counter" id="lightboxCounter"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <span class="footer-brand">X<span class="brand-dot">.</span>J</span>
+                <span class="footer-school">SMAN 6 Kabupaten Tangerang • TA 2026/2027</span>
+            </div>
+            <div class="footer-right">
+                <span class="footer-credit"><i class="fa-solid fa-code"></i> Website Created by <strong>Revan / Vanx</strong></span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

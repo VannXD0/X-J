@@ -1,0 +1,4 @@
+Nama: Siswa 3
+Asal: SMP Contoh 3
+Hobi: Coding
+Cita-cita: Programmer
